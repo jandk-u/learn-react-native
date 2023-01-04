@@ -16,9 +16,20 @@ export default function Setting({navigation}) {
             <Text> Back</Text>
         </TouchableOpacity>
     </View>
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
         <Text>Setting screen</Text>
         {/* <Text>{ username }</Text> */}
+    </View>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <TouchableOpacity
+            style={{height:"30%", aspectRatio:1.7, flexDirection: "row", justifyContent: 'center', alignItems: 'center'}}
+            onPress={()=>{
+                navigation.popToTop()
+            }}
+        >
+            <Icon name="log-out"/>
+            <Text> Log out</Text>
+        </TouchableOpacity>
     </View>
 </SafeAreaView>
   )

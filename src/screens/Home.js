@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Feather';
 
 
 export default function Home({route, navigation}) {
-    // const {username} = route.params;
+    const { username } = route.params;
     return (
         <SafeAreaView style={{flex: 1}}>
             <View style={{height: "8%", width: "100%", flexDirection: 'row', justifyContent:"space-between"}}>
@@ -32,7 +32,7 @@ export default function Home({route, navigation}) {
             </View>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>Home screen</Text>
-                {/* <Text>{ username }</Text> */}
+                <Text>{ username }</Text>
             </View>
         </SafeAreaView>
   )

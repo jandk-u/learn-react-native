@@ -15,7 +15,8 @@ const windowHeight = Dimensions.get('window').height;
 
 
 export default Login = ({navigation}) => {
-  const [getPasswordVisible, setPasswordVisible] = useState(false)
+  const [getPasswordVisible, setPasswordVisible] = useState(false);
+  const [getUsername, setUsername] = useState("");
 
     return (
         <ImageBackground 
@@ -33,9 +34,11 @@ export default Login = ({navigation}) => {
                   <Text style={{color: 'white'}}>Username:</Text>
                   <TextInput 
                     style={{height: '100%', width: '70%', borderBottomWidth: 1, borderBottomColor:'white', color: 'white'}}
-                    placeholder="useless placeholder"
+                    placeholder=""
                     placeholderTextColor="white"
-                    keyboardType=""/>
+                    value={getUsername}
+                    onChangeText={setUsername}
+                    />
                 </View>
               {/* Password */}
                 <View style={{width: '70%', height: 50, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
@@ -54,7 +57,6 @@ export default Login = ({navigation}) => {
                       getPasswordVisible?
                         <Icon name="eye" color="white" /> : <Icon name="eye-off" color="white" />
                     }
-                    
                   </TouchableOpacity>
                   
                 </View>
@@ -65,7 +67,9 @@ export default Login = ({navigation}) => {
                   <TouchableOpacity 
                     style={{width: "40%", height:"120%", borderWidth: 1, borderRadius: 15, alignItems: "center", justifyContent: "center", backgroundColor: "gray"}}
                     onPress={()=>{
-                      navigation.navigate("Home")
+                      navigation.navigate("Home", {
+                        username: getUsername,
+                      })
                     }}
                     >
                     <Text style={{color: "white"}}>Login</Text>
