@@ -67,7 +67,7 @@ export default Login = ({navigation}) => {
                   <TouchableOpacity 
                     style={{width: "40%", height:"120%", borderWidth: 1, borderRadius: 15, alignItems: "center", justifyContent: "center", backgroundColor: "gray"}}
                     onPress={()=>{
-                      navigation.navigate("Home", {
+                      navigation.navigate("HomeDrawer", {
                         username: getUsername,
                       })
                     }}

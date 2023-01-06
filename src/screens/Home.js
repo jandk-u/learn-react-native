@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Feather';
 
 
 export default function Home({route, navigation}) {
-    const { username } = route.params;
+    // const { username } = route.params;
     return (
         <SafeAreaView style={{flex: 1}}>
             <View style={{height: "8%", width: "100%", flexDirection: 'row', justifyContent:"space-between"}}>
@@ -12,11 +12,11 @@ export default function Home({route, navigation}) {
                     <TouchableOpacity
                         style={{height:"30%", aspectRatio: 2.7, flexDirection: "row", justifyContent: 'center', alignItems: 'center'}}
                         onPress={()=>{
-                            navigation.goBack()
+                            navigation.openDrawer()
                         }}
                     >
-                        <Icon name="arrow-left"/>
-                        <Text> Back</Text>
+                        <Icon name="menu"/>
+                        {/* <Text> Back</Text> */}
                     </TouchableOpacity>
                 </View>
                 <View style={{height: "100%", right: 0}}>
@@ -32,7 +32,7 @@ export default function Home({route, navigation}) {
             </View>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>Home screen</Text>
-                <Text>{ username }</Text>
+                {/* <Text>{ username }</Text> */}
             </View>
         </SafeAreaView>
   )
