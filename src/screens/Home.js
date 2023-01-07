@@ -8,17 +8,19 @@ export default function Home({route, navigation}) {
     return (
         <SafeAreaView style={{flex: 1}}>
             <View style={{height: "8%", width: "100%", flexDirection: 'row', justifyContent:"space-between"}}>
-                <View style={{height:"100%"}}>
-                    <TouchableOpacity
-                        style={{height:"30%", aspectRatio: 2.7, flexDirection: "row", justifyContent: 'center', alignItems: 'center'}}
-                        onPress={()=>{
-                            navigation.openDrawer()
-                        }}
-                    >
-                        <Icon name="menu"/>
+                {/* <View style={{height:"100%"}}> */}
+                     {/* <TouchableOpacity */}
+                        {/* style={{height:"30%", aspectRatio: 2.7, flexDirection: "row", justifyContent: 'center', alignItems: 'center'}} */}
+                        {/* onPress={()=>{ */}
+                            {/* navigation.openDrawer() */}
+                        {/* }} */}
+                    {/* > */}
+                        {/* <Icon name="menu"/> */}
                         {/* <Text> Back</Text> */}
-                    </TouchableOpacity>
-                </View>
+                    {/* </TouchableOpacity> */}
+                {/* </View> */}
+                <View style={{height:"100%"}}></View>
+
                 <View style={{height: "100%", right: 0}}>
                     <TouchableOpacity
                         style={{height:"30%", aspectRatio:1.7, flexDirection: "row", justifyContent: 'center', alignItems: 'center'}}

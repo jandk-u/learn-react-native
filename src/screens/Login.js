@@ -66,10 +66,13 @@ export default Login = ({navigation}) => {
                 <View style={{width: '50%', height:"20%", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
                   <TouchableOpacity 
                     style={{width: "40%", height:"120%", borderWidth: 1, borderRadius: 15, alignItems: "center", justifyContent: "center", backgroundColor: "gray"}}
+                    // onPress={()=>{
+                    //   navigation.navigate("HomeDrawer", {
+                    //     // username: getUsername,
+                    //   })
+                    // }}
                     onPress={()=>{
-                      navigation.navigate("HomeDrawer", {
-                        username: getUsername,
-                      })
+                      navigation.navigate("HomeTabs")
                     }}
                     >
                     <Text style={{color: "white"}}>Login</Text>
