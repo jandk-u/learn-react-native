@@ -7,10 +7,18 @@ Link install: <br>
 ##### - Android studio: https://developer.android.com/
 ##### - React native: https://reactnative.dev/docs/environment-setup
 
-## DAY3: 
+## DAY2: 
 Navigation in react native is my choice for learning day 2.  
 
 ## DAY3:
 I learn Drawer and Tabs, ...
 But in this day, I had an issue about npm start and run-android ( I can't run the app in svd) when installing react-navigation/drawer, so I switch to Yarn to install
 <br>
+## DAY4:
+I learn redux (store, reducer, action)
+
+## DAY5:
+Scrollview is easy to lean than redux ^ ^
+
+<br>
+....
