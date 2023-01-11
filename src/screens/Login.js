@@ -20,7 +20,8 @@ export default Login = ({navigation}) => {
 
     return (
         <ImageBackground 
-          style={{height: '100%', width: '100%'}} 
+          style={{height: Dimensions.get('window').height, width: Dimensions.get('window').width, position: 'absolute',}} 
+          resizeMethod={'resize'}
           resizeMode={'cover'}
           source={require('../images/bg.jpg')}>
           <StatusBar barStyle={"light-content"}/>

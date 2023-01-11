@@ -1,6 +1,9 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Button } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Icon from 'react-native-vector-icons/Feather';
+import { useDispatch, useSelector } from 'react-redux';
+import { TextInput } from 'react-native-gesture-handler';
+import {updateEmail} from '../redux/actions/updateAction';
 
 
 export default function Home({route, navigation}) {
@@ -8,6 +11,9 @@ export default function Home({route, navigation}) {
 
     const [number, setNumber] = useState(1);
     const [data, setData] = useState({data: null});
+    const info = useSelector((state) => state.personalInfo)
+    const [email, onChangeText] = useState("")
+    const dispatch = useDispatch();
 
     const CallAPI = () => {
         return new Promise((resolve, reject) => {
@@ -37,7 +43,7 @@ export default function Home({route, navigation}) {
     useEffect(() => {
         console.log("vao man hinh")
         getData(setData)
-
+        console.log("INFO: ", info)
         return () =>{
             console.log("thoats man hinh")
         }
@@ -76,7 +82,20 @@ export default function Home({route, navigation}) {
             </View>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>Home screen</Text>
-                {/* <Text>{ username }</Text> */}
+                <Text>EMAIL: { info.email }</Text>
+                <Text>Score: { info.score }</Text>
+                <Text>ADDRESS: { info.address }</Text>
+                <Text>ID: { info.id }</Text>
+
+                <TextInput 
+                    style={{height: 40, width: '60%', margin: 12, borderWidth: 1, padding: 10}}
+                    onChangeText={onChangeText} value={email} />
+                <TouchableOpacity 
+                    style={{width: '30%', height: '10%', borderColor: "green", borderWidth: 1, borderRadius:15, justifyContent: "center", alignItems: "center", marginTop: 20, backgroundColor: "green"}}
+                    onPress={() => { dispatch(updateEmail(email))} }
+                >
+                    <Text style={{color: "white"}}>Update email</Text>
+                </TouchableOpacity>
             </View>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>Counting number</Text>
