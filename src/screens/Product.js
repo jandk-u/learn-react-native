@@ -2,6 +2,8 @@ import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Feather';
 
+import PictureList from './picture-list';
+
 export default function Product({navigation}) {
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -15,6 +17,9 @@ export default function Product({navigation}) {
             <Icon name="arrow-left"/>
             <Text> Back</Text>
         </TouchableOpacity>
+    </View>
+    <View>
+        <PictureList/>
     </View>
     <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
         <Text>Product screen</Text>
