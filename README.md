@@ -20,5 +20,7 @@ I learn redux (store, reducer, action)
 ## DAY5:
 Scrollview is easy to lean than redux ^ ^
 
+## DAY6:
+Learn how to split a component
 <br>
 ....
