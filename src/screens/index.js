@@ -13,7 +13,8 @@ import { Provider } from 'react-redux';
 import { store } from '../redux/store';
 
 import Home from './Home';
-import Login from './Login';
+// import Login from './Login';
+import Login from './Login-component';
 import Setting from './Setting';
 import Vendor from './Vendor';
 import Product from './Product';
