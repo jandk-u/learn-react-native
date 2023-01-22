@@ -20,6 +20,9 @@ import Vendor from './Vendor';
 import Product from './Product';
 import Profile from './Profile';
 import PictureList from './picture-list';
+// import Animation from './animations';
+import Animation from './Animation';
+import Validation from './validation';
 
 import Icon from 'react-native-vector-icons/Feather';
 
@@ -79,10 +82,12 @@ export default RootComponent = function() {
                     <Drawer.Screen name='Login' component={Login}/>
                     <Drawer.Screen name="Setting" component={Setting} />
                 </Drawer.Navigator> */}
-                <Stack.Navigator initialRouteName='Login' screenOptions={{headerShown: false}}>
+                <Stack.Navigator initialRouteName='Validation' screenOptions={{headerShown: false}}>
                     <Stack.Screen name='Login' component={Login}/>
-                    {/* <Stack.Screen name="HomeDrawer" component={HomeDrawer}/> */}
+                    <Stack.Screen name='Animation' component={Animation}/>
+                    <Stack.Screen name="HomeDrawer" component={HomeDrawer}/>
                     <Stack.Screen name="HomeTabs" component={HomeTab}/>
+                    <Stack.Screen name="Validation" component={Validation}/>
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>

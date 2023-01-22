@@ -22,5 +22,10 @@ Scrollview is easy to lean than redux ^ ^
 
 ## DAY6:
 Learn how to split a component
-<br>
+
+## DAY7:
+Learn Animation: Animated.loop, Animated.parallel, Animated.sequence
+
+## DAY8:
+Learn Validation input text and basic regex 
 ....
