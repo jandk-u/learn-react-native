@@ -13,7 +13,7 @@ export default function PictureList({navigation}) {
 
   const [listImage, setListImage] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
-  const stepCarousel = useRef(null);
+  const stepCarousel = useRef();
 
   const handleScroll = (e) => {
     if(!e){
@@ -27,7 +27,7 @@ export default function PictureList({navigation}) {
         indexImage = Math.floor((nativeEvent.contentOffset.x + screenWidth / 2) / screenWidth);
       }
       setCurrentImage(indexImage)
-      console.log("Image index:", indexImage)
+      // console.log("Image index:", indexImage)
     }
   }
 
@@ -78,8 +78,7 @@ export default function PictureList({navigation}) {
       image: <Image key= {"8"} source={require("../images/1.jpg")} resizeMode="stretch" style={{width: screenWidth, height: "100%"}}></Image>,
       type: "png",
       camera: "Sonny"
-    },
-    ];
+    }];
 
     setListImage(data);
 
@@ -89,7 +88,7 @@ export default function PictureList({navigation}) {
     if(listImage.length > 0){
       let index = 0;
       setInterval(() =>{
-        stepCarousel.current.scrollTo({ x: index * screenWidth, y:0, animated: true })
+        stepCarousel.current.scrollTo({ x: index * screenWidth, y:0, animated: false })
         index += 1;
         if(index === listImage.length) {
           index = 0;
