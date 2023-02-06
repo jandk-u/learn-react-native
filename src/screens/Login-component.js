@@ -19,21 +19,20 @@ export default Login = ({navigation}) => {
     return (
         <View style={{height: "100%", width: "100%"}}>
             <View style={{height: "25%", width: "100%"}}>
-                <RedComponent page={page} setPage={setPage}/>
+                <MenuComponent page={page} setPage={setPage}/>
             </View>
             <View style={{height: "40%", width: "100%"}}>
-                {page === SIGN_IN? <GreenComponent/>: <GrayComponent/>}
-                
+                {page === SIGN_IN? <LoginComponent/>: <SignUpComponent/>}
             </View>
             <View>
-                <BlueComponent/>
+                <SocialComponent/>
             </View>
                         
         </View>
     );
 }
 
-const RedComponent = ({page, setPage}) => {
+const MenuComponent = ({page, setPage}) => {
     return (
         <View style={{flex: 1}}>
             <StatusBar barStyle='light-content'/>
@@ -45,6 +44,7 @@ const RedComponent = ({page, setPage}) => {
                     </View>
                 </View>
                 <View style={{height: 50, flexDirection: 'row'}}>
+                    {/* ==== SIGN IN ==== */}
                     <TouchableOpacity 
                         style={{width: "50%", height: "100%", justifyContent: 'center', alignItems: 'center', }}
                         onPress={() => setPage(SIGN_IN)}
@@ -53,6 +53,7 @@ const RedComponent = ({page, setPage}) => {
                         <Text style={{fontSize: 16, color: '#4d8d6e'}}>Sign In</Text>
                         {page === SIGN_IN ? <View style={{width: "100%", height: 3 ,backgroundColor: "#4d8d6e", position: 'absolute', bottom: 0}}/> : null}
                     </TouchableOpacity>
+                    {/* ==== GET STARTED ==== */}
                     <TouchableOpacity 
                         style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
                         onPress={() => setPage(GET_STARTED)}
@@ -67,7 +68,7 @@ const RedComponent = ({page, setPage}) => {
     );
 }
 
-const GreenComponent = ({getPasswordVisible, setPasswordVisible}) =>{
+const LoginComponent = ({getPasswordVisible, setPasswordVisible}) =>{
     return (
         <View style={{height: "100%", width: '100%', backgroundColor: "#eeeeee", justifyContent: "center"}}>
             <Text style={{fontSize: 24, marginLeft: 30, marginTop: 10}}>Login in your account.</Text>
@@ -108,7 +109,7 @@ const GreenComponent = ({getPasswordVisible, setPasswordVisible}) =>{
     );
 }
 
-const GrayComponent = ({getPasswordVisible, setPasswordVisible}) =>{
+const SignUpComponent = ({getPasswordVisible, setPasswordVisible}) =>{
     return (
         <View style={{height: "100%", width: '100%', backgroundColor: "#eeeeee", justifyContent: "center"}}>
             <Text style={{fontSize: 24, marginLeft: 30, marginTop: 10}}>Register account</Text>
@@ -157,7 +158,7 @@ const GrayComponent = ({getPasswordVisible, setPasswordVisible}) =>{
     );
 }
 
-const BlueComponent = () => {
+const SocialComponent = () => {
 
     return (
         <View style={{width: '100%', height: '100%', backgroundColor: "#eeeeee"}}>
