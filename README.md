@@ -28,4 +28,10 @@ Learn Animation: Animated.loop, Animated.parallel, Animated.sequence
 
 ## DAY8:
 Learn Validation input text and basic regex 
+
+## DAY9:
+Learn fetch API: get, post, put, delete
+
+## DAY10:
+Learn show video youtube
 ....
