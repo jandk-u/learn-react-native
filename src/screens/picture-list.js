@@ -73,11 +73,6 @@ export default function PictureList({navigation}) {
       image: <Image key= {"7"} source={require("../images/2.jpg")} resizeMode="stretch" style={{width: screenWidth, height: "100%"}}></Image>,
       type: "png",
       camera: "Cannon"
-    },
-    {      
-      image: <Image key= {"8"} source={require("../images/1.jpg")} resizeMode="stretch" style={{width: screenWidth, height: "100%"}}></Image>,
-      type: "png",
-      camera: "Sonny"
     }];
 
     setListImage(data);

@@ -90,7 +90,7 @@ export default RootComponent = function() {
                     <Stack.Screen name="HomeDrawer" component={HomeDrawer}/>
                     <Stack.Screen name="HomeTabs" component={HomeTab}/>
                     <Stack.Screen name="Validation" component={Validation}/>
-                    <Stack.Screen name='Youtube' component={YoutubePlayer}/>
+                    {/* <Stack.Screen name='Youtube' component={YoutubePlayer}/> */}
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>

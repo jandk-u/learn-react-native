@@ -34,4 +34,7 @@ Learn fetch API: get, post, put, delete
 
 ## DAY10:
 Learn show video youtube
+
+## DAY11:
+Learn Modal (pop up) and practice components
 ....
